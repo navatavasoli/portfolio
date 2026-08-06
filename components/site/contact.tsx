@@ -1,7 +1,6 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// EDIT-ME: real email + LinkedIn URL below.
 const EMAIL = "nava.tavasoli@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/nava-tavasoli/";
 
@@ -12,8 +11,7 @@ export function Contact() {
         Get in touch
       </h3>
       <p className="max-w-lg text-muted-foreground">
-        Open to internships, research collaborations, and interesting hardware
-        or AI/ML problems. The fastest channel is email.
+        I'm currently open to internship opportunities for Summer 2027. 
       </p>
       <div className="flex flex-wrap gap-3">
         <Button

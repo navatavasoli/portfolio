@@ -31,7 +31,7 @@ const projects = [
   },
   {
     index: "P-02",
-    title: "F1 Telemetry Web App",
+    title: "Formula 1 Telemetry App",
     role: "Personal project",
     description:
       "Race results, championship standings, session schedules, and lap telemetry for the 2026 season with FastF1 data served from Python backend.",
@@ -64,6 +64,7 @@ const projects = [
     ],
     tags: ["LangChain", "LangGraph", "Qdrant", "Ollama", "RAG"],
     href: "https://github.com/navatavasoli",
+    image: "/RAG.png"
   },
   {
     index: "P-04",

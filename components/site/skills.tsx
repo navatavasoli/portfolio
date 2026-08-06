@@ -1,19 +1,23 @@
 const groups = [
   {
     label: "LANGUAGES",
-    items: ["Python", "TypeScript", "Java", "Go", "SQL", "MATLAB"],
+    items: ["Python", "TypeScript", "Java", "Go", "SQL", "MATLAB", "PowerShell", "Scheme", "Prolog", "HTML", "Jupyter Notebook"],
   },
   {
     label: "HARDWARE & SIGNALS",
-    items: ["Simulink", "Arduino", "Raspberry Pi", "ROS", "Circuit analysis", "Lab instrumentation"],
+    items: ["Simulink", "Arduino", "Raspberry Pi", "ROS", "Altera Quartus", "NVIDIA NIMs", "NVIDIA GPUs"],
   },
   {
     label: "AI/ML & DATA",
-    items: ["LangChain", "LangGraph", "RAG", "pandas", "Power BI", "CUDA (Numba)"],
+    items: ["LangChain", "LangGraph", "CUDA", "Mongo DB", "Pydantic"],
   },
   {
     label: "CLOUD & TOOLS",
-    items: ["Docker", "AWS", "Google Cloud", "Firebase", "Git", "Azure DevOps"],
+    items: ["Docker", "AWS", "Google Cloud Platform", "Firebase", "Git", "Azure DevOps", "Apache Maven"],
+  },
+  {
+    label: "FEATURED SKILLS",
+    items: ["Public Speaking", "Technical Writing", "Creative Problem Solving", "Project Management and Coordination"],
   },
 ];
 

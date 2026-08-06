@@ -29,8 +29,7 @@ export function Hero() {
             I&apos;m a <Typewriter words={ROLES} className="text-primary" />
           </p>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Hardware security, signal processing, and applied AI/ML —
-            building at the layer where software meets silicon.
+            Welcome to my portfolio! I'm passionate about where hardware meets software. Check out my blog to see what I'm up to.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <Button

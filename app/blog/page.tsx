@@ -4,6 +4,7 @@ import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import { MediaFrame } from "@/components/site/media-frame";
 import { getAllPosts } from "@/lib/blog";
 import { formatPostDate } from "@/lib/format-date";
+import { SubscribeForm } from "@/components/site/subscribe-form";
 
 export const metadata: Metadata = {
   title: "Blog — Nava Tavasoli",
@@ -23,9 +24,11 @@ export default function BlogIndexPage() {
           ← HOME
         </Link>
       </div>
-      <h1 className="mb-10 font-display text-3xl font-semibold tracking-tight">
+      <h1 className="mb-6 font-display text-3xl font-semibold tracking-tight">
         Blog
       </h1>
+
+      <SubscribeForm className="mb-10 max-w-md" />
 
       {posts.length === 0 ? (
         <p className="text-sm text-muted-foreground">

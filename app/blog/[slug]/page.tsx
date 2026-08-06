@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug } from "@/lib/blog";
 import { formatPostDate } from "@/lib/format-date";
+import { SubscribeForm } from "@/components/site/subscribe-form";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -64,6 +65,8 @@ export default async function BlogPostPage({
         className="blog-content"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+
+      <SubscribeForm className="mt-12" />
     </main>
   );
 }

@@ -170,6 +170,16 @@ html {
   font-family: var(--font-chakra-petch), var(--font-archivo), sans-serif;
 }
 
+/* Loading sweep for the 3D scene placeholder */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
 /* Small extras */
 .text-trace {
   color: oklch(0.72 0.1 230); /* signal blue, for plot annotations */

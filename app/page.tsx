@@ -6,6 +6,7 @@ import { Blog } from "@/components/site/blog";
 import { Experience } from "@/components/site/experience";
 import { Skills } from "@/components/site/skills";
 import { Contact } from "@/components/site/contact";
+import { RobotLab } from "@/components/site/robot-lab";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Section id="about" index="01" title="ABOUT">
         <About />
       </Section>
+      <RobotLab />
       <Section id="projects" index="02" title="PROJECTS">
         <Projects />
       </Section>

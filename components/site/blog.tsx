@@ -3,15 +3,19 @@ import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import { MediaFrame } from "@/components/site/media-frame";
 import { getAllPosts } from "@/lib/blog";
 import { formatPostDate } from "@/lib/format-date";
+import { SubscribeForm } from "@/components/site/subscribe-form";
 
 export function Blog() {
   const posts = getAllPosts().slice(0, 3);
 
   if (posts.length === 0) {
     return (
-      <p className="text-sm text-muted-foreground">
-        No posts yet — check back soon.
-      </p>
+      <div className="flex flex-col gap-6">
+        <p className="text-sm text-muted-foreground">
+          No posts yet — check back soon.
+        </p>
+        <SubscribeForm className="max-w-sm" />
+      </div>
     );
   }
 
@@ -61,13 +65,16 @@ export function Blog() {
           </Link>
         ))}
       </div>
-      <Link
-        href="/blog"
-        className="group inline-flex w-fit items-center gap-1 font-tech text-xs text-muted-foreground opacity-80 transition-opacity hover:text-foreground hover:opacity-100"
-      >
-        VIEW ALL POSTS{" "}
-        <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </Link>
+      <div className="flex flex-col items-start gap-4">
+        <Link
+          href="/blog"
+          className="group inline-flex w-fit items-center gap-1 font-tech text-xs text-muted-foreground opacity-80 transition-opacity hover:text-foreground hover:opacity-100"
+        >
+          VIEW ALL POSTS{" "}
+          <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </Link>
+        <SubscribeForm className="w-full max-w-sm" />
+      </div>
     </div>
   );
 }
