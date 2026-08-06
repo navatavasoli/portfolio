@@ -17,6 +17,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const images = post.image ? [{ url: post.image }] : undefined;
   return {
     title: post.title,
     description: post.excerpt,
@@ -28,6 +29,14 @@ export async function generateMetadata({
       description: post.excerpt,
       type: "article",
       url: `https://navatavasoli.com/blog/${slug}`,
+      publishedTime: post.date || undefined,
+      images,
+    },
+    twitter: {
+      card: images ? "summary_large_image" : "summary",
+      title: post.title,
+      description: post.excerpt,
+      images,
     },
   };
 }
@@ -43,6 +52,27 @@ export default async function BlogPostPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-28 md:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date || undefined,
+            dateModified: post.date || undefined,
+            image: post.image ? [post.image] : undefined,
+            url: `https://navatavasoli.com/blog/${slug}`,
+            mainEntityOfPage: `https://navatavasoli.com/blog/${slug}`,
+            author: {
+              "@type": "Person",
+              name: "Nava Tavasoli",
+              url: "https://navatavasoli.com",
+            },
+          }),
+        }}
+      />
       <div className="mb-10 flex items-center gap-4">
         <Link
           href="/blog"
@@ -64,7 +94,7 @@ export default async function BlogPostPage({
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.image}
-            alt=""
+            alt={post.title}
             className="h-full w-full object-cover"
           />
         </div>

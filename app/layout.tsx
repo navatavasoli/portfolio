@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Archivo, IBM_Plex_Mono, Chakra_Petch } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Navbar } from "@/components/site/navbar";
 import { PixelCursorTrail } from "@/components/ui/pixel-trail";
@@ -59,8 +60,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/headshot.png",
-        width: 800,
-        height: 800,
+        width: 1445,
+        height: 1717,
         alt: "Nava Tavasoli",
       },
     ],
@@ -118,6 +119,7 @@ export default function RootLayout({
         <PixelCursorTrail />
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
