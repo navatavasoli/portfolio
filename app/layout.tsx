@@ -27,9 +27,60 @@ const chakraPetch = Chakra_Petch({
 });
 
 export const metadata: Metadata = {
-  title: "Nava Tavasoli — Computing Technology × Electrical Engineering",
+  metadataBase: new URL("https://navatavasoli.com"),
+  title: {
+    default: "Nava Tavasoli — Computing Technology × Electrical Engineering",
+    template: "%s — Nava Tavasoli",
+  },
   description:
     "Portfolio of Nava Tavasoli: hardware security, signal processing, and applied AI/ML. CS + EE double degree at the University of Ottawa.",
+  keywords: [
+    "Nava Tavasoli",
+    "hardware security",
+    "signal processing",
+    "applied AI",
+    "machine learning",
+    "University of Ottawa",
+    "computing technology",
+    "electrical engineering",
+  ],
+  authors: [{ name: "Nava Tavasoli", url: "https://navatavasoli.com" }],
+  creator: "Nava Tavasoli",
+  alternates: {
+    canonical: "https://navatavasoli.com",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://navatavasoli.com",
+    title: "Nava Tavasoli — Computing Technology × Electrical Engineering",
+    description:
+      "Portfolio of Nava Tavasoli: hardware security, signal processing, and applied AI/ML. CS + EE double degree at the University of Ottawa.",
+    siteName: "Nava Tavasoli",
+    images: [
+      {
+        url: "/headshot.png",
+        width: 800,
+        height: 800,
+        alt: "Nava Tavasoli",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nava Tavasoli — Computing Technology × Electrical Engineering",
+    description:
+      "Portfolio of Nava Tavasoli: hardware security, signal processing, and applied AI/ML. CS + EE double degree at the University of Ottawa.",
+    images: ["/headshot.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -43,6 +94,27 @@ export default function RootLayout({
       className={`dark ${geist.variable} ${archivo.variable} ${plexMono.variable} ${chakraPetch.variable}`}
     >
       <body className="bg-background text-foreground antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nava Tavasoli",
+              url: "https://navatavasoli.com",
+              image: "https://navatavasoli.com/headshot.png",
+              jobTitle: "Computing Technology × Electrical Engineering",
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "University of Ottawa",
+              },
+              sameAs: [
+                "https://www.linkedin.com/in/nava-tavasoli/",
+                "https://github.com/navatavasoli",
+              ],
+            }),
+          }}
+        />
         <PixelCursorTrail />
         <Navbar />
         {children}

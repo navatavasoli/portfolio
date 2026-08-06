@@ -7,8 +7,11 @@ import { formatPostDate } from "@/lib/format-date";
 import { SubscribeForm } from "@/components/site/subscribe-form";
 
 export const metadata: Metadata = {
-  title: "Blog — Nava Tavasoli",
+  title: "Blog",
   description: "Posts from Nava Tavasoli.",
+  alternates: {
+    canonical: "https://navatavasoli.com/blog",
+  },
 };
 
 export default function BlogIndexPage() {

@@ -18,8 +18,17 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Nava Tavasoli`,
+    title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://navatavasoli.com/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `https://navatavasoli.com/blog/${slug}`,
+    },
   };
 }
 
