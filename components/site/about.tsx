@@ -5,8 +5,8 @@ export function About() {
         <p>
           I&apos;m a third-year student at the University of Ottawa doing a
           double degree in BSc in Computing Technology (BSc) and
-          Electrical Engineering (BASc). I&apos;m working in the layer where software meets
-          silicon: signals, circuits, and the systems built on top of them.
+          Electrical Engineering (BASc). I&apos;m keen on working in the layer where software meets
+          silicon. I'm interested in AI, military defence, and cybersecurity. 
         </p>
       </div>
       <dl className="grid h-fit grid-cols-2 gap-x-6 gap-y-6 rounded-md border border-border bg-card p-6 font-tech text-sm">

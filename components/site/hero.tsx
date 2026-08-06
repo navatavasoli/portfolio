@@ -20,7 +20,7 @@ export function Hero() {
       >
         <div className="flex flex-col gap-6">
           <span className="font-tech text-xs tracking-[0.2em] text-primary">
-            CS + EE · UNIVERSITY OF OTTAWA
+            CURRENT AFFILIATION: DEPARTMENT OF NATIONAL DEFENCE CANADA
           </span>
           <h1 className="font-signature bg-gradient-to-r from-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
             Nava Tavasoli
