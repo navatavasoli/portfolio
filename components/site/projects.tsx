@@ -15,7 +15,7 @@ const projects = [
   {
     index: "P-01",
     title: "Cryptography Research Project",
-    role: "Researcher",
+    role: "Independent Research",
     description:
       "The Applications of Linear non-Homogeneous Diophantine Equations to Computer Cryptography",
     fullDescription:
@@ -34,16 +34,18 @@ const projects = [
     title: "F1 Telemetry Web App",
     role: "Personal project",
     description:
-      "Race results, championship standings, session schedules, and lap telemetry (speed, throttle, gear) for the 2026 season — FastF1 data served from a Python backend.",
+      "Race results, championship standings, session schedules, and lap telemetry for the 2026 season with FastF1 data served from Python backend.",
     fullDescription:
-      "A personal-project dashboard for following the 2026 F1 season: results, standings, and schedules alongside lap-by-lap telemetry. A Python backend pulls and processes timing data via the FastF1 library and serves it to a web frontend for charting speed, throttle, and gear traces.",
+      "Dashboard for following the 2026 F1 season for results, standings, and schedules alongside lap-by-lap telemetry. A Python backend pulls and processes timing data via the FastF1 library and serves it to a web frontend for charting speed, throttle, and gear traces.",
     highlights: [
       "Live-season results, championship standings, and session schedules",
       "Lap telemetry: speed, throttle, and gear traces via FastF1",
       "Python backend (FastAPI) serving a data-viz frontend",
+      "Expanding to have ML pipelines for predictive analysis"
     ],
-    tags: ["Python", "FastAPI", "Data Viz"],
+    tags: ["Python", "FastAPI", "Data Visualization"],
     href: "#",
+    image: "/F1 app.png"
   },
   {
     index: "P-03",
@@ -60,8 +62,38 @@ const projects = [
       "Stage 4: LangGraph self-correction loop",
       "Stage 5: multi-agent orchestration",
     ],
-    tags: ["LangChain", "LangGraph", "Qdrant", "Ollama"],
+    tags: ["LangChain", "LangGraph", "Qdrant", "Ollama", "RAG"],
     href: "https://github.com/navatavasoli",
+  },
+  {
+    index: "P-04",
+    title: "Nerd Bot",
+    role: "LLM Build",
+    description:
+      "A simple LLM to explain snippets of code for absolute beginners wanting to learn.",
+    fullDescription:
+      "NerdBot is an LLM that uses OpenAI's APIs to parse through snippets of user-entered code and helps to explain it to you line by line. Currently supporting Python, Java, and Swift.",
+    highlights: [
+      "Supported on Windows, Linux, and macOS.",
+    ],
+    tags: ["LLMs", "Python", "Java", "Swift"],
+    href: "https://github.com/navatavasoli/nerdbot",
+    image: "/nerdbot.png"
+  },
+  {
+    index: "P-05",
+    title: "The Legend of Zelda: Zelda's Awakening",
+    role: "Independent Game",
+    description:
+      "An independent, Pygame build of the Legend of Zelda with a complete set of assets, audio, and two-player mechanisms.",
+    fullDescription:
+      "Build from scratch with Python (Pygame), the game has 10 minutes of playtime and more than 150 gameplay assets.",
+    highlights: [
+      "Downloadable on local devices"
+    ],
+    tags: ["Python", "Game Development"],
+    href: "#",
+    image: "/zelda.png"
   },
 ];
 
