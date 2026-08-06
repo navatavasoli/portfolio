@@ -1,31 +1,34 @@
+import Link from "next/link";
+
 const links = [
-  { href: "#about", label: "ABOUT" },
-  { href: "#projects", label: "PROJECTS" },
-  { href: "#experience", label: "EXPERIENCE" },
-  { href: "#contact", label: "WORK WITH ME" },
+  { href: "/#about", label: "ABOUT" },
+  { href: "/#projects", label: "PROJECTS" },
+  { href: "/#experience", label: "EXPERIENCE" },
+  { href: "/#contact", label: "WORK WITH ME" },
+  { href: "/#blog", label: "BLOG" },
 ];
 
 export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-6">
-        <a href="#top" className="group font-tech text-sm text-foreground">
+        <Link href="/" className="group font-tech text-sm text-foreground">
           <span className="mr-2 border border-primary/60 px-1.5 py-0.5 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
             NT
           </span>
-          tavasoli
-        </a>
+          © nava tavasoli 2026
+        </Link>
         <nav className="flex items-center gap-6">
           <div className="hidden items-center gap-6 md:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="group relative font-tech text-xs tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-200 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
           <a
