@@ -5,7 +5,7 @@ export function About() {
         <p>
           I&apos;m a third-year student at the University of Ottawa doing a
           double degree in BSc in Computing Technology (BSc) and
-          Electrical Engineering (BASc). I'm working in the layer where software meets
+          Electrical Engineering (BASc). I&apos;m working in the layer where software meets
           silicon: signals, circuits, and the systems built on top of them.
         </p>
         <p>

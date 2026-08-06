@@ -16,7 +16,7 @@ export function Hero() {
       <span className="font-tech text-xs tracking-[0.2em] text-primary">
         CS + EE · UNIVERSITY OF OTTAWA
       </span>
-      <h1 className="font-signature bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
+      <h1 className="font-signature bg-gradient-to-r from-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
         Nava Tavasoli
       </h1>
       <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -24,12 +24,22 @@ export function Hero() {
         the layer where software meets silicon.
       </p>
       <div className="flex flex-wrap gap-3 pt-2">
-        <Button size="lg" className="gap-2 font-tech" asChild>
+        <Button
+          size="lg"
+          className="group gap-2 font-tech transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
+          asChild
+        >
           <a href="#projects">
-            View Projects <ArrowUpRight className="h-4 w-4" />
+            View Projects{" "}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </Button>
-        <Button size="lg" variant="outline" className="gap-2 font-tech" asChild>
+        <Button
+          size="lg"
+          variant="outline"
+          className="gap-2 font-tech transition-all hover:-translate-y-0.5 hover:border-primary/60"
+          asChild
+        >
           <a href="#contact">Get in Touch</a>
         </Button>
       </div>

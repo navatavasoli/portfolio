@@ -25,14 +25,26 @@ export function Contact() {
             <Mail className="h-4 w-4" /> Email me
           </a>
         </Button>
-        <Button size="lg" variant="outline" className="gap-2 font-tech" asChild>
+        <Button
+          size="lg"
+          variant="outline"
+          className="group gap-2 font-tech transition-all hover:-translate-y-0.5 hover:border-primary/60"
+          asChild
+        >
           <a href="https://github.com/navatavasoli" target="_blank" rel="noopener noreferrer">
-            GitHub <ArrowUpRight className="h-4 w-4" />
+            GitHub{" "}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </Button>
-        <Button size="lg" variant="outline" className="gap-2 font-tech" asChild>
+        <Button
+          size="lg"
+          variant="outline"
+          className="group gap-2 font-tech transition-all hover:-translate-y-0.5 hover:border-primary/60"
+          asChild
+        >
           <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
-            LinkedIn <ArrowUpRight className="h-4 w-4" />
+            LinkedIn{" "}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </Button>
       </div>
