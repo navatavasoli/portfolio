@@ -5,6 +5,9 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MediaFrame } from "@/components/site/media-frame";
 import { PixelCursorTrail } from "@/components/ui/pixel-trail";
+import { Typewriter } from "@/components/ui/typewriter";
+
+const ROLES = ["developer", "engineer", "speaker", "researcher"];
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -24,6 +27,9 @@ export function Hero() {
           <h1 className="font-signature bg-gradient-to-r from-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
             Nava Tavasoli
           </h1>
+          <p className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
+            I&apos;m a <Typewriter words={ROLES} className="text-primary" />
+          </p>
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             Hardware security, signal processing, and applied AI/ML —
             building at the layer where software meets silicon.
