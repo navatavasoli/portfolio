@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, useCallback } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
+import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -15,19 +14,20 @@ import { MediaFrame } from "@/components/site/media-frame";
 const projects = [
   {
     index: "P-01",
-    title: "Atlas Tech Diodes",
-    role: "Co-lead",
+    title: "Cryptography Research Project",
+    role: "Researcher",
     description:
-      "Hardware cybersecurity project developing low-cost unidirectional data diodes for critical-infrastructure applications. Research grant application in progress.",
+      "The Applications of Linear non-Homogeneous Diophantine Equations to Computer Cryptography",
     fullDescription:
-      "Atlas Tech Diodes builds low-cost unidirectional data diodes — hardware that physically enforces one-way data flow — for critical-infrastructure environments where a software-only guarantee isn't enough. The goal is to bring diode-grade isolation within reach of smaller operators who currently can't afford commercial solutions.",
+      "I worked as an independent researcher leading a deep dive into the use of homogeneous Diophantine equations to computer cryptography as part of the Canadian Mathematical Society's research competition.",
     highlights: [
-      "Physical (not just logical) enforcement of one-way data transfer",
-      "Designed for cost-constrained critical-infrastructure deployments",
-      "Research grant application currently in progress",
+      "Accepted into the CMS Mathematical Research Showcase",
+      "Supervised by Dr. Nazanin Zaker at the University of Ottawa's Department of Mathematics",
+      "Direct insights into cryptography for cybersecurity",
     ],
-    tags: ["Hardware Security", "Embedded", "Research"],
+    tags: ["Cybersecurity", "Research"],
     href: "#",
+    image: "/cryptography.png"
   },
   {
     index: "P-02",
@@ -65,53 +65,16 @@ const projects = [
   },
 ];
 
-const CARD_WIDTH = 320;
-
 export function Projects() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  const updateScrollState = useCallback(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 4);
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
-  }, []);
-
-  useEffect(() => {
-    updateScrollState();
-    const el = scrollerRef.current;
-    if (!el) return;
-    el.addEventListener("scroll", updateScrollState, { passive: true });
-    window.addEventListener("resize", updateScrollState);
-    return () => {
-      el.removeEventListener("scroll", updateScrollState);
-      window.removeEventListener("resize", updateScrollState);
-    };
-  }, [updateScrollState]);
-
-  const scrollBy = (dir: 1 | -1) => {
-    scrollerRef.current?.scrollBy({
-      left: dir * (CARD_WIDTH + 20),
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <div className="relative">
-      <div
-        ref={scrollerRef}
-        className="flex snap-x snap-proximity gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-border [&::-webkit-scrollbar-track]:bg-transparent"
-      >
+    <div className="grid gap-5 md:grid-cols-3">
       {projects.map((p) => (
         <Dialog key={p.index}>
           <DialogTrigger asChild>
             <article
               role="button"
               tabIndex={0}
-              style={{ width: CARD_WIDTH }}
-              className="group flex shrink-0 snap-start cursor-pointer flex-col gap-4 rounded-md border border-border bg-card p-5 text-left transition-all duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/5"
+              className="group flex cursor-pointer flex-col gap-4 rounded-md border border-border bg-card p-5 text-left transition-all duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/5"
             >
               <div className="flex items-center justify-between font-tech text-xs text-muted-foreground">
                 <span className="text-primary">{p.index}</span>
@@ -156,6 +119,8 @@ export function Projects() {
             <MediaFrame
               label={`IMG · ${p.index}`}
               icon={ImageIcon}
+              src={p.image}
+              alt={p.title}
               className="aspect-video w-full rounded-b-none border-x-0 border-t-0"
             />
             <div className="flex flex-col gap-5 p-6">
@@ -205,37 +170,6 @@ export function Projects() {
           </DialogContent>
         </Dialog>
       ))}
-      </div>
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-background to-transparent transition-opacity duration-200"
-        style={{ opacity: canScrollLeft ? 1 : 0 }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background to-transparent transition-opacity duration-200"
-        style={{ opacity: canScrollRight ? 1 : 0 }}
-      />
-
-      <button
-        type="button"
-        aria-label="Scroll projects left"
-        onClick={() => scrollBy(-1)}
-        disabled={!canScrollLeft}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:border-primary/60 hover:text-primary disabled:pointer-events-none disabled:opacity-0"
-      >
-        <ChevronLeft className="h-4 w-4" />
-      </button>
-      <button
-        type="button"
-        aria-label="Scroll projects right"
-        onClick={() => scrollBy(1)}
-        disabled={!canScrollRight}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:border-primary/60 hover:text-primary disabled:pointer-events-none disabled:opacity-0"
-      >
-        <ChevronRight className="h-4 w-4" />
-      </button>
     </div>
   );
 }

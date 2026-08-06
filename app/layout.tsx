@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Archivo, IBM_Plex_Mono, Chakra_Petch } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/site/navbar";
+import { PixelCursorTrail } from "@/components/ui/pixel-trail";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
       className={`dark ${geist.variable} ${archivo.variable} ${plexMono.variable} ${chakraPetch.variable}`}
     >
       <body className="bg-background text-foreground antialiased">
+        <PixelCursorTrail />
         <Navbar />
         {children}
       </body>

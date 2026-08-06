@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useRef, useState, useCallback } from "react"
+import { useReducedMotion } from "framer-motion"
 
 interface Pixel {
   id: number
@@ -14,6 +15,7 @@ const TRAIL_LENGTH = 40
 const FADE_SPEED = 0.04
 
 export function PixelCursorTrail() {
+  const reduce = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
   const [pixels, setPixels] = useState<Pixel[]>([])
   const pixelIdRef = useRef(0)
@@ -58,11 +60,14 @@ export function PixelCursorTrail() {
   )
 
   useEffect(() => {
+    if (reduce) return
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [handleMouseMove])
+  }, [reduce, handleMouseMove])
 
   useEffect(() => {
+    if (reduce) return
+
     const animate = () => {
       setPixels((prev) =>
         prev
@@ -83,12 +88,14 @@ export function PixelCursorTrail() {
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [])
+  }, [reduce])
+
+  if (reduce) return null
 
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none absolute inset-0 h-full w-full select-none overflow-hidden"
+      className="pointer-events-none fixed inset-0 -z-10 h-screen w-screen select-none overflow-hidden"
     >
       {pixels.map((pixel) => {
         // Calculate size based on age - older pixels are smaller

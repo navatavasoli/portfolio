@@ -4,7 +4,6 @@ import { ArrowUpRight, UserRound } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MediaFrame } from "@/components/site/media-frame";
-import { PixelCursorTrail } from "@/components/ui/pixel-trail";
 import { Typewriter } from "@/components/ui/typewriter";
 
 const ROLES = ["developer", "engineer", "speaker", "researcher"];
@@ -13,7 +12,6 @@ export function Hero() {
   const reduce = useReducedMotion();
   return (
     <section className="relative overflow-hidden">
-      <PixelCursorTrail />
       <motion.div
         className="relative z-10 mx-auto grid w-full max-w-5xl gap-10 px-6 pb-16 pt-40 md:grid-cols-[1.3fr_1fr] md:items-center md:pb-24 md:pt-48"
         initial={reduce ? false : { opacity: 0, y: 24 }}
@@ -58,6 +56,8 @@ export function Hero() {
         <MediaFrame
           label="IMG · NT-01"
           icon={UserRound}
+          src="/headshot.png"
+          alt="Nava Tavasoli"
           className="aspect-square w-full max-w-xs justify-self-center md:justify-self-end"
         />
       </motion.div>
