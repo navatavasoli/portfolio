@@ -16,7 +16,11 @@ export function Contact() {
         or AI/ML problems. The fastest channel is email.
       </p>
       <div className="flex flex-wrap gap-3">
-        <Button size="lg" className="gap-2 font-tech" asChild>
+        <Button
+          size="lg"
+          className="gap-2 font-tech transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
+          asChild
+        >
           <a href={`mailto:${EMAIL}`}>
             <Mail className="h-4 w-4" /> Email me
           </a>

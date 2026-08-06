@@ -37,7 +37,7 @@ export function Projects() {
       {projects.map((p) => (
         <article
           key={p.index}
-          className="group flex flex-col gap-4 rounded-md border border-border bg-card p-5 transition-colors hover:border-primary/60"
+          className="group flex flex-col gap-4 rounded-md border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/5"
         >
           <div className="flex items-center justify-between font-tech text-xs text-muted-foreground">
             <span className="text-primary">{p.index}</span>
@@ -53,7 +53,7 @@ export function Projects() {
             {p.tags.map((t) => (
               <span
                 key={t}
-                className="rounded-sm border border-border px-2 py-0.5 font-tech text-[10px] tracking-wider text-muted-foreground"
+                className="rounded-sm border border-border px-2 py-0.5 font-tech text-[10px] tracking-wider text-muted-foreground transition-colors group-hover:border-primary/40 group-hover:text-foreground/90"
               >
                 {t}
               </span>
@@ -63,7 +63,8 @@ export function Projects() {
             href={p.href}
             className="inline-flex items-center gap-1 font-tech text-xs text-primary opacity-80 transition-opacity hover:opacity-100"
           >
-            SOURCE <ArrowUpRight className="h-3 w-3" />
+            SOURCE{" "}
+            <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </article>
       ))}

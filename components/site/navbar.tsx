@@ -9,8 +9,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-6">
-        <a href="#top" className="font-tech text-sm text-foreground">
-          <span className="mr-2 border border-primary/60 px-1.5 py-0.5 text-primary">
+        <a href="#top" className="group font-tech text-sm text-foreground">
+          <span className="mr-2 border border-primary/60 px-1.5 py-0.5 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
             NT
           </span>
           tavasoli
@@ -21,9 +21,10 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="font-tech text-xs tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground"
+                className="group relative font-tech text-xs tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-200 group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -32,7 +33,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-foreground"
           >
             <svg
               viewBox="0 0 24 24"

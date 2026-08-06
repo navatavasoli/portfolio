@@ -16,7 +16,7 @@ export function Hero() {
       <span className="font-tech text-xs tracking-[0.2em] text-primary">
         CS + EE · UNIVERSITY OF OTTAWA
       </span>
-      <h1 className="font-display text-5xl font-bold uppercase tracking-tight md:text-7xl">
+      <h1 className="font-signature bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
         Nava Tavasoli
       </h1>
       <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">

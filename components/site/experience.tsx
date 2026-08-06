@@ -37,13 +37,15 @@ export function Experience() {
       {rows.map((r) => (
         <div
           key={r.role}
-          className="grid gap-2 border-t border-border py-5 last:border-b md:grid-cols-[160px_1fr_1.2fr] md:gap-6"
+          className="group grid gap-2 border-t border-l-2 border-border border-l-transparent py-5 pl-3 -ml-3 last:border-b transition-colors hover:bg-card hover:border-l-primary md:grid-cols-[160px_1fr_1.2fr] md:gap-6"
         >
           <span className="font-tech text-xs leading-6 text-muted-foreground">
             {r.period}
           </span>
           <div>
-            <h3 className="font-medium">{r.role}</h3>
+            <h3 className="font-display font-semibold tracking-tight">
+              {r.role}
+            </h3>
             <p className="text-sm text-primary">{r.org}</p>
           </div>
           <p className="text-sm leading-relaxed text-muted-foreground">

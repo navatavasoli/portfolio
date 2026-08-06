@@ -29,7 +29,7 @@ export function Skills() {
             {g.items.map((s) => (
               <span
                 key={s}
-                className="rounded-sm border border-border bg-card px-3 py-1.5 font-tech text-xs text-foreground/90"
+                className="rounded-sm border border-border bg-card px-3 py-1.5 font-tech text-xs text-foreground/90 transition-colors hover:border-primary/60 hover:bg-primary/10 hover:text-foreground"
               >
                 {s}
               </span>

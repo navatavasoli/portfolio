@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Geist, Archivo, IBM_Plex_Mono, Chakra_Petch } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/site/navbar";
 
@@ -19,6 +19,12 @@ const plexMono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
 });
 
+const chakraPetch = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-chakra-petch",
+});
+
 export const metadata: Metadata = {
   title: "Nava Tavasoli — Computing Technology × Electrical Engineering",
   description:
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geist.variable} ${archivo.variable} ${plexMono.variable} bg-background text-foreground antialiased`}
+        className={`${geist.variable} ${archivo.variable} ${plexMono.variable} ${chakraPetch.variable} bg-background text-foreground antialiased`}
       >
         <Navbar />
         {children}

@@ -166,6 +166,9 @@ html {
 .font-tech {
   font-family: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
 }
+.font-signature {
+  font-family: var(--font-chakra-petch), var(--font-archivo), sans-serif;
+}
 
 /* Small extras */
 .text-trace {
