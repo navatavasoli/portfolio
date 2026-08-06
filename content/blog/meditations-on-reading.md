@@ -2,7 +2,7 @@
 title: "meditations on reading"
 date: "2026-08-06"
 excerpt: "Starting a new chapter."
-image: "/public/blog/welcome-to-my-blog/books.jpg"
+image: "/blog/meditations-on-reading/books.jpg"
 ---
 
 Recently, I've had the chance to get back into reading. It's something I've held as being very important to me since childhood, but with school and activities, it's difficult to find the dedicated time to actually be able to pick up a book and sit with it for a good while. 
