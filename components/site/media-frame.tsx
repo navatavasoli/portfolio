@@ -1,9 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// EDIT-ME: this renders a styled placeholder in place of a real photo.
-// Swap it for a plain <img src="..." /> (or next/image) once you have assets —
-// e.g. <img src="/images/portrait.jpg" alt="Nava Tavasoli" className="h-full w-full object-cover" />
 export function MediaFrame({
   label,
   icon: Icon,

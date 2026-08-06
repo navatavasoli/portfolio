@@ -2,7 +2,7 @@ const links = [
   { href: "#about", label: "ABOUT" },
   { href: "#projects", label: "PROJECTS" },
   { href: "#experience", label: "EXPERIENCE" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "#contact", label: "WORK WITH ME" },
 ];
 
 export function Navbar() {

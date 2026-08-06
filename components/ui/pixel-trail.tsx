@@ -1,5 +1,4 @@
 "use client"
-import type React from "react"
 import { useEffect, useRef, useState, useCallback } from "react"
 
 interface Pixel {
@@ -32,12 +31,18 @@ export function PixelCursorTrail() {
   }, [])
 
   const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
+    (e: MouseEvent) => {
       if (!containerRef.current) return
 
       const rect = containerRef.current.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
+
+      // Only trail while the cursor is actually over this section — this
+      // listens on window (rather than the div itself) so it still fires
+      // when the topmost element under the cursor is hero content sitting
+      // above the trail layer (text, buttons, the portrait frame).
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height) return
 
       const dx = x - lastPositionRef.current.x
       const dy = y - lastPositionRef.current.y
@@ -51,6 +56,11 @@ export function PixelCursorTrail() {
     },
     [createPixel],
   )
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => window.removeEventListener("mousemove", handleMouseMove)
+  }, [handleMouseMove])
 
   useEffect(() => {
     const animate = () => {
@@ -78,8 +88,7 @@ export function PixelCursorTrail() {
   return (
     <div
       ref={containerRef}
-      onMouseMove={handleMouseMove}
-      className="absolute inset-0 h-full w-full select-none overflow-hidden"
+      className="pointer-events-none absolute inset-0 h-full w-full select-none overflow-hidden"
     >
       {pixels.map((pixel) => {
         // Calculate size based on age - older pixels are smaller
