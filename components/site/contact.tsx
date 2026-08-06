@@ -2,8 +2,8 @@ import { ArrowUpRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // EDIT-ME: real email + LinkedIn URL below.
-const EMAIL = "you@example.com";
-const LINKEDIN = "https://www.linkedin.com/in/YOUR-HANDLE";
+const EMAIL = "nava.tavasoli@gmail.com";
+const LINKEDIN = "https://www.linkedin.com/in/nava-tavasoli/";
 
 export function Contact() {
   return (
@@ -49,7 +49,7 @@ export function Contact() {
         </Button>
       </div>
       <p className="border-t border-border pt-6 font-tech text-xs text-muted-foreground">
-        © 2026 NAVA TAVASOLI · BUILT WITH NEXT.JS · DATASHEET REV 3.0
+        © 2026 NAVA TAVASOLI · BUILT WITH PASSION  
       </p>
     </div>
   );
