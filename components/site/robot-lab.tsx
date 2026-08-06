@@ -80,15 +80,13 @@ export function RobotLab() {
           </div>
 
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-            Meet the lab assistant.
+            Meet NAVA-BOT.
           </h2>
 
           <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-            Most of what I build lives in the gap between a schematic and a
-            shipped interface, with firmware that has to hit a deadline, models that
-            have to fit on the board, and UI that has to make the whole thing
-            legible. This one just watches your cursor, but the idea is the
-            same: hardware you can actually talk to. That's what I'm on a mission to promote.
+            The rapid adoption of AI into all facets of life can be difficult to grasp. Software can lose it's "fun" becoming
+            more about numbers and results rather than about promoting human innovation. I'm on a mission to encourage innovation and promote
+            human creativity through software, instead of having it replace us. Play around with the NAVA-BOT, and watch it follow your cursor!
           </p>
 
           <dl className="grid max-w-md grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-6 font-tech text-sm">
