@@ -128,3 +128,49 @@
     @apply font-sans;
   }
 }
+
+/* ============================================================
+   NAVA DATASHEET THEME — paste this at the VERY END of app/globals.css
+   (Overrides the shadcn Nova tokens via cascade order. Dark-only.)
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.dark {
+  --background: oklch(0.15 0.02 262);          /* ink: deep blue-charcoal */
+  --foreground: oklch(0.93 0.012 85);          /* paper: warm white */
+  --card: oklch(0.18 0.02 262);
+  --card-foreground: oklch(0.93 0.012 85);
+  --popover: oklch(0.18 0.02 262);
+  --popover-foreground: oklch(0.93 0.012 85);
+  --primary: oklch(0.76 0.12 65);              /* copper trace */
+  --primary-foreground: oklch(0.16 0.03 65);
+  --secondary: oklch(0.24 0.02 262);
+  --secondary-foreground: oklch(0.9 0.012 85);
+  --muted: oklch(0.22 0.02 262);
+  --muted-foreground: oklch(0.68 0.015 262);
+  --accent: oklch(0.24 0.02 262);
+  --accent-foreground: oklch(0.93 0.012 85);
+  --border: oklch(0.27 0.018 262);
+  --input: oklch(0.27 0.018 262);
+  --ring: oklch(0.76 0.12 65);
+}
+
+/* Type roles */
+.font-display {
+  font-family: var(--font-archivo), var(--font-geist-sans), sans-serif;
+}
+.font-tech {
+  font-family: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Small extras */
+.text-trace {
+  color: oklch(0.72 0.1 230); /* signal blue, for plot annotations */
+}
+::selection {
+  background: oklch(0.76 0.12 65 / 0.3);
+}
