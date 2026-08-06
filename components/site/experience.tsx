@@ -1,14 +1,14 @@
 const rows = [
   {
-    period: "JUN 2026 — NOW",
-    role: "AI/ML Engineer (Student)",
-    org: "Canadian defence sector", // EDIT-ME: name the employer if you're comfortable
-    desc: "Data-science support: analysis tooling and BI dashboards for decision-makers.",
+    period: "JUNE 2026 — AUGUST 2026",
+    role: "AI/ML Engineer (Data Science Support)",
+    org: "Department of National Defence - Warfighter Support Division", 
+    desc: "Developed agentic models for military applications using LangChain, LangGraph, and RAG. Performed data analysis and optimized raw inputs for entry into an ML pipeline. Developed an autonomous LLM assessment application to query and grade AI models.",
   },
   {
-    period: "2025",
+    period: "MARCH 2025 - PRESENT",
     role: "Co-Principal Cybersecurity Researcher",
-    org: "uOttawa Faculty of Engineering",
+    org: "uOttawa Faculty of Electrical Engineering and Computer Science",
     desc: "RCMP-funded study on LLMs for cybersecurity education; Python/SQL analysis of experimental results.",
   },
   {
@@ -22,12 +22,6 @@ const rows = [
     role: "Software Developer",
     org: "Shabodi Inc.",
     desc: "AWS-compatible detection of SIM swap and duplication on 5G enterprise networks.",
-  },
-  {
-    period: "2024",
-    role: "Cryptography Researcher",
-    org: "Canadian Mathematical Society",
-    desc: "Cipher-based encryption method built on Diophantine equations.",
   },
 ];
 
