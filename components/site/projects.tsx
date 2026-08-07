@@ -116,7 +116,7 @@ export function Projects() {
               <h3 className="font-display text-xl font-semibold tracking-tight">
                 {p.title}
               </h3>
-              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+              <p className="font-subtext flex-1 text-sm leading-relaxed text-muted-foreground">
                 {p.description}
               </p>
               <div className="flex flex-wrap gap-2">
@@ -164,7 +164,7 @@ export function Projects() {
                 </div>
                 <DialogTitle>{p.title}</DialogTitle>
               </DialogHeader>
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="font-subtext text-sm leading-relaxed text-muted-foreground">
                 {p.fullDescription}
               </p>
               <ul className="flex flex-col gap-2">

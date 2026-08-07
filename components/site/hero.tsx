@@ -34,7 +34,7 @@ export function Hero() {
           <p className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
             I&apos;m a <Typewriter words={ROLES} className="text-primary" />
           </p>
-          <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="font-subtext max-w-xl text-lg leading-relaxed text-muted-foreground">
             Welcome to my portfolio! I'm passionate about where hardware meets software. Check out my blog to see what I'm up to.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">

@@ -58,7 +58,7 @@ export function Blog() {
                 {post.title}
               </h3>
               {post.excerpt && (
-                <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                <p className="font-subtext line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                   {post.excerpt}
                 </p>
               )}

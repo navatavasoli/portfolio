@@ -1,7 +1,7 @@
 export function About() {
   return (
     <div className="grid gap-10 md:grid-cols-[3fr_2fr]">
-      <div className="flex flex-col items-center justify-center gap-4 text-center text-base leading-relaxed text-muted-foreground">
+      <div className="font-subtext flex flex-col items-center justify-center gap-4 text-center text-base leading-relaxed text-muted-foreground">
         <p>
           I&apos;m a third-year student at the University of Ottawa doing a
           double degree in BSc in Computing Technology (BSc) and

@@ -26,7 +26,7 @@ export function SubscribeForm({ className }: { className?: string }) {
       <div className="flex items-center gap-2 font-tech text-xs text-primary">
         <Mail className="h-3.5 w-3.5" /> SUBSCRIBE
       </div>
-      <p className="text-sm text-muted-foreground">
+      <p className="font-subtext text-sm text-muted-foreground">
         Get an email whenever I publish a new post. No spam, unsubscribe
         anytime.
       </p>

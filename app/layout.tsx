@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Archivo, IBM_Plex_Mono, Chakra_Petch } from "next/font/google";
+import { Geist, Archivo, IBM_Plex_Mono, Chakra_Petch, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Navbar } from "@/components/site/navbar";
@@ -25,6 +25,13 @@ const chakraPetch = Chakra_Petch({
   subsets: ["latin"],
   weight: ["600", "700"],
   variable: "--font-chakra-petch",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-source-serif",
 });
 
 export const metadata: Metadata = {
@@ -92,7 +99,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geist.variable} ${archivo.variable} ${plexMono.variable} ${chakraPetch.variable}`}
+      className={`dark ${geist.variable} ${archivo.variable} ${plexMono.variable} ${chakraPetch.variable} ${sourceSerif.variable}`}
     >
       <body className="bg-background text-foreground antialiased">
         <script

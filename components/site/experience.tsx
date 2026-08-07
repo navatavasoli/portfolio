@@ -124,7 +124,7 @@ export function Experience() {
               <p className="text-sm text-primary">{r.org}</p>
             )}
           </div>
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="font-subtext text-sm leading-relaxed text-muted-foreground">
             {r.desc}
           </p>
         </div>

@@ -10,8 +10,8 @@ export function Contact() {
       <h3 className="font-display text-4xl font-bold uppercase tracking-tight md:text-5xl">
         Get in touch
       </h3>
-      <p className="max-w-lg text-muted-foreground">
-        I'm currently open to internship opportunities for Summer 2027. 
+      <p className="font-subtext max-w-lg text-muted-foreground">
+        I'm currently open to internship opportunities for Summer 2027.
       </p>
       <div className="flex flex-wrap gap-3">
         <Button

@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
         <h1 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
           Blog
         </h1>
-        <p className="text-base text-muted-foreground">
+        <p className="font-subtext text-base text-muted-foreground">
           Notes on what I&apos;m building, reading, and thinking about.
         </p>
       </div>
@@ -90,7 +90,7 @@ export default function BlogIndexPage() {
                   {post.title}
                 </h2>
                 {post.excerpt && (
-                  <p className="line-clamp-3 text-sm text-muted-foreground">
+                  <p className="font-subtext line-clamp-3 text-sm text-muted-foreground">
                     {post.excerpt}
                   </p>
                 )}

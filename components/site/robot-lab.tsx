@@ -83,7 +83,7 @@ export function RobotLab() {
             Meet NAVA-BOT.
           </h2>
 
-          <p className="max-w-md text-base leading-relaxed text-muted-foreground">
+          <p className="font-subtext max-w-md text-base leading-relaxed text-muted-foreground">
             The rapid adoption of AI into all facets of life can be difficult to grasp. Software can lose it's "fun" becoming
             more about numbers and results rather than about promoting human innovation. I'm on a mission to encourage innovation and promote
             human creativity through software, instead of having it replace us. Play around with the NAVA-BOT, and watch it follow your cursor!

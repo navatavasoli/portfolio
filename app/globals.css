@@ -173,6 +173,9 @@ html {
 .font-signature {
   font-family: var(--font-chakra-petch), var(--font-archivo), sans-serif;
 }
+.font-subtext {
+  font-family: var(--font-source-serif), Cambria, Georgia, serif;
+}
 
 /* Loading sweep for the 3D scene placeholder */
 @keyframes scan {
