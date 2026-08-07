@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowUpRight, Image as ImageIcon } from "lucide-react";
+import { Image as ImageIcon } from "lucide-react";
 import { MediaFrame } from "@/components/site/media-frame";
 import { getAllPosts } from "@/lib/blog";
 import { formatPostDate } from "@/lib/format-date";
@@ -18,7 +18,16 @@ export default function BlogIndexPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-6 py-28 md:py-32">
+    <main className="relative mx-auto w-full max-w-5xl px-6 py-28 md:py-32">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 isolate -z-10 overflow-hidden opacity-60"
+      >
+        <div className="absolute left-0 top-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,--theme(--color-foreground/.06)_0,hsla(0,0%,55%,.02)_50%,--theme(--color-foreground/.01)_80%)]" />
+        <div className="absolute left-0 top-0 h-320 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)] [translate:5%_-50%]" />
+        <div className="absolute left-0 top-0 h-320 w-60 -translate-y-87.5 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,--theme(--color-foreground/.04)_0,--theme(--color-foreground/.01)_80%,transparent_100%)]" />
+      </div>
+
       <div className="mb-10 flex items-center gap-4">
         <Link
           href="/"
@@ -27,9 +36,15 @@ export default function BlogIndexPage() {
           ← HOME
         </Link>
       </div>
-      <h1 className="mb-6 font-display text-3xl font-semibold tracking-tight">
-        Blog
-      </h1>
+
+      <div className="mb-10 space-y-1">
+        <h1 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
+          Blog
+        </h1>
+        <p className="text-base text-muted-foreground">
+          Notes on what I&apos;m building, reading, and thinking about.
+        </p>
+      </div>
 
       <SubscribeForm className="mb-10 max-w-md" />
 
@@ -38,12 +53,12 @@ export default function BlogIndexPage() {
           No posts yet — check back soon.
         </p>
       ) : (
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col gap-4 rounded-md border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/5"
+              className="group flex flex-col gap-2 rounded-lg p-2 duration-75 hover:bg-accent/60 active:bg-accent"
             >
               {post.image ? (
                 <div className="aspect-video w-full overflow-hidden rounded-sm border border-border">
@@ -51,7 +66,7 @@ export default function BlogIndexPage() {
                   <img
                     src={post.image}
                     alt=""
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
                   />
                 </div>
               ) : (
@@ -61,24 +76,23 @@ export default function BlogIndexPage() {
                   className="aspect-video w-full"
                 />
               )}
-              <time
-                dateTime={post.date}
-                className="font-tech text-xs text-primary"
-              >
-                {formatPostDate(post.date)}
-              </time>
-              <h2 className="font-display text-xl font-semibold tracking-tight">
-                {post.title}
-              </h2>
-              {post.excerpt && (
-                <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {post.excerpt}
-                </p>
-              )}
-              <span className="font-tech text-xs text-primary opacity-80 transition-opacity group-hover:opacity-100">
-                READ{" "}
-                <ArrowUpRight className="inline h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
+              <div className="space-y-2 px-2 pb-2">
+                <div className="flex items-center gap-2 font-tech text-[11px] text-muted-foreground sm:text-xs">
+                  <p>{post.author}</p>
+                  <div className="size-1 rounded-full bg-muted-foreground" />
+                  <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+                  <div className="size-1 rounded-full bg-muted-foreground" />
+                  <p>{post.readTime}</p>
+                </div>
+                <h2 className="line-clamp-2 font-display text-lg font-semibold leading-5 tracking-tight">
+                  {post.title}
+                </h2>
+                {post.excerpt && (
+                  <p className="line-clamp-3 text-sm text-muted-foreground">
+                    {post.excerpt}
+                  </p>
+                )}
+              </div>
             </Link>
           ))}
         </div>

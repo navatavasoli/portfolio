@@ -295,7 +295,6 @@ export function Terminal() {
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyDown={handleKeyDown}
             className="flex-1 bg-transparent text-white caret-green-400 outline-none"
-            autoFocus
             spellCheck="false"
           />
           <span className="animate-pulse text-green-400">█</span>

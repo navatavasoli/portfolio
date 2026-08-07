@@ -6,7 +6,7 @@ import { formatPostDate } from "@/lib/format-date";
 import { SubscribeForm } from "@/components/site/subscribe-form";
 
 export function Blog() {
-  const posts = getAllPosts().slice(0, 3);
+  const posts = getAllPosts().slice(0, 6);
 
   if (posts.length === 0) {
     return (
@@ -21,12 +21,12 @@ export function Blog() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group flex flex-col gap-4 rounded-md border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/5"
+            className="group flex flex-col gap-2 rounded-lg p-2 duration-75 hover:bg-accent/60 active:bg-accent"
           >
             {post.image ? (
               <div className="aspect-video w-full overflow-hidden rounded-sm border border-border">
@@ -34,7 +34,7 @@ export function Blog() {
                 <img
                   src={post.image}
                   alt=""
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
                 />
               </div>
             ) : (
@@ -44,24 +44,23 @@ export function Blog() {
                 className="aspect-video w-full"
               />
             )}
-            <time
-              dateTime={post.date}
-              className="font-tech text-xs text-primary"
-            >
-              {formatPostDate(post.date)}
-            </time>
-            <h3 className="font-display text-xl font-semibold tracking-tight">
-              {post.title}
-            </h3>
-            {post.excerpt && (
-              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
-                {post.excerpt}
-              </p>
-            )}
-            <span className="font-tech text-xs text-primary opacity-80 transition-opacity group-hover:opacity-100">
-              READ{" "}
-              <ArrowUpRight className="inline h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </span>
+            <div className="space-y-2 px-2 pb-2">
+              <div className="flex items-center gap-2 font-tech text-[11px] text-muted-foreground sm:text-xs">
+                <p>{post.author}</p>
+                <div className="size-1 rounded-full bg-muted-foreground" />
+                <time dateTime={post.date}>{formatPostDate(post.date)}</time>
+                <div className="size-1 rounded-full bg-muted-foreground" />
+                <p>{post.readTime}</p>
+              </div>
+              <h3 className="line-clamp-2 font-display text-xl font-semibold leading-5 tracking-tight">
+                {post.title}
+              </h3>
+              {post.excerpt && (
+                <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                  {post.excerpt}
+                </p>
+              )}
+            </div>
           </Link>
         ))}
       </div>

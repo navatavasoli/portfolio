@@ -44,13 +44,13 @@ const projects = [
       "Expanding to have ML pipelines for predictive analysis"
     ],
     tags: ["Python", "FastAPI", "Data Visualization"],
-    href: "#",
+    href: "https://f1-telemetry-tracker-eta.vercel.app/",
     image: "/F1 app.png"
   },
   {
     index: "P-03",
     title: "rag-agent-lite",
-    role: "Learning build",
+    role: "Personal project",
     description:
       "Agentic RAG built up in five incremental stages: basic retrieval, hybrid dense+BM25 search, tool calling, LangGraph self-correction, and multi-agent orchestration — all running on local models.",
     fullDescription:

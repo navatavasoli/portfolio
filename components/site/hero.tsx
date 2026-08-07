@@ -4,6 +4,7 @@ import { ArrowUpRight, UserRound } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MediaFrame } from "@/components/site/media-frame";
+import { NameSignature } from "@/components/site/name";
 import { Typewriter } from "@/components/ui/typewriter";
 
 const ROLES = ["developer", "engineer", "speaker", "researcher"];
@@ -22,8 +23,13 @@ export function Hero() {
           <span className="font-tech text-xs tracking-[0.2em] text-primary">
             CURRENT AFFILIATION: DEPARTMENT OF NATIONAL DEFENCE CANADA
           </span>
-          <h1 className="font-signature bg-gradient-to-r from-foreground to-primary bg-clip-text text-5xl font-bold uppercase tracking-tight text-transparent md:text-7xl">
-            Nava Tavasoli
+          <h1>
+            <span className="sr-only">Nava Tavasoli</span>
+            <NameSignature
+              speed={reduce ? 0.05 : 1}
+              className="w-full max-w-lg"
+              aria-hidden="true"
+            />
           </h1>
           <p className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
             I&apos;m a <Typewriter words={ROLES} className="text-primary" />

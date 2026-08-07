@@ -11,14 +11,25 @@ export type PostMeta = {
   date: string;
   image?: string;
   excerpt?: string;
+  author: string;
+  readTime: string;
 };
 
 export type Post = PostMeta & { contentHtml: string };
+
+const DEFAULT_AUTHOR = "Nava Tavasoli";
+const WORDS_PER_MINUTE = 200;
 
 function readPostFile(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   return matter(fileContents);
+}
+
+function deriveReadTime(content: string): string {
+  const words = content.trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / WORDS_PER_MINUTE));
+  return `${minutes} min read`;
 }
 
 function deriveExcerpt(content: string): string {
@@ -49,6 +60,8 @@ export function getAllPosts(): PostMeta[] {
         date: (data.date as string) ?? "",
         image: data.image as string | undefined,
         excerpt: (data.excerpt as string | undefined) || deriveExcerpt(content),
+        author: (data.author as string | undefined) || DEFAULT_AUTHOR,
+        readTime: deriveReadTime(content),
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -67,6 +80,8 @@ export function getPostBySlug(slug: string): Post | null {
     date: (data.date as string) ?? "",
     image: data.image as string | undefined,
     excerpt: data.excerpt as string | undefined,
+    author: (data.author as string | undefined) || DEFAULT_AUTHOR,
+    readTime: deriveReadTime(content),
     contentHtml,
   };
 }
