@@ -25,9 +25,9 @@ export function Section({
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="mb-10 flex items-center gap-4">
-        <span className="font-tech text-xs font-medium tracking-[0.2em] text-primary">
+        <h2 className="font-tech text-xs font-medium tracking-[0.2em] text-primary">
           {index} · {title}
-        </span>
+        </h2>
         <span className="h-px flex-1 bg-border" aria-hidden />
       </div>
       {children}

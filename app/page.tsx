@@ -16,6 +16,11 @@ export default function Home() {
       <Section id="about" index="01" title="ABOUT">
         <About />
       </Section>
+      <div className="mx-auto w-full max-w-5xl px-6">
+        <p className="text-base leading-relaxed text-muted-foreground">
+          The terminal below acts like a *real* console! Try it out to get a summary of the content I feature on my page.
+        </p>
+      </div>
       <Section id="terminal" index="02" title="TERMINAL">
         <Terminal />
       </Section>
@@ -32,7 +37,7 @@ export default function Home() {
       <Section id="skills" index="06" title="SKILLS">
         <Skills />
       </Section>
-      <Section id="contact" index="07" title="CONTACT">
+      <Section id="contact" index="07" title="GET IN TOUCH">
         <Contact />
       </Section>
     </main>

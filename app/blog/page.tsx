@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Image as ImageIcon } from "lucide-react";
 import { MediaFrame } from "@/components/site/media-frame";
@@ -61,12 +62,13 @@ export default function BlogIndexPage() {
               className="group flex flex-col gap-2 rounded-lg p-2 duration-75 hover:bg-accent/60 active:bg-accent"
             >
               {post.image ? (
-                <div className="aspect-video w-full overflow-hidden rounded-sm border border-border">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                <div className="relative aspect-video w-full overflow-hidden rounded-sm border border-border">
+                  <Image
                     src={post.image}
-                    alt=""
-                    className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
+                    alt={post.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-all duration-500 group-hover:scale-105"
                   />
                 </div>
               ) : (
