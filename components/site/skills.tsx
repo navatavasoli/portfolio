@@ -4,6 +4,10 @@ const groups = [
     items: ["Python", "TypeScript", "Java", "Go", "SQL", "MATLAB", "PowerShell", "Scheme", "Prolog", "HTML", "Jupyter Notebook"],
   },
   {
+    label: "FRAMEWORKS & LIBRARIES",
+    items: ["React", "Next.js", "Node.js", "Flask", "Spline", "vanilla JS"],
+  },
+  {
     label: "HARDWARE & SIGNALS",
     items: ["Simulink", "Arduino", "Raspberry Pi", "ROS", "Altera Quartus", "NVIDIA NIMs", "NVIDIA GPUs"],
   },
