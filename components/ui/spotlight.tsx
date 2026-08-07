@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 
 /**
- * A copper glow that trails the cursor across the nearest positioned ancestor.
+ * A red-to-blue glow that trails the cursor across the nearest positioned ancestor.
  * Listens on the parent element rather than itself so it keeps tracking while
  * the pointer is over content stacked above it (text, buttons, a WebGL canvas).
  */
@@ -63,7 +63,7 @@ export function Spotlight({
         transform,
         opacity,
         background:
-          "radial-gradient(circle at center, oklch(0.76 0.12 65 / 0.18), oklch(0.72 0.1 230 / 0.07) 45%, transparent 70%)",
+          "radial-gradient(circle at center, oklch(0.62 0.22 27 / 0.18), oklch(0.5 0.16 258 / 0.1) 45%, transparent 70%)",
       }}
     />
   );

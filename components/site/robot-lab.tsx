@@ -113,13 +113,13 @@ export function RobotLab() {
         </div>
 
         <div className="relative h-[340px] w-full md:h-[520px]">
-          {/* Copper bloom behind the rig so it reads against the dark panel. */}
+          {/* Golden bloom behind the rig so it reads against the dark panel. */}
           <div
             aria-hidden
             className="pointer-events-none absolute inset-x-8 inset-y-12 -z-10 rounded-full blur-3xl"
             style={{
               background:
-                "radial-gradient(ellipse at center, oklch(0.76 0.12 65 / 0.14), transparent 65%)",
+                "radial-gradient(ellipse at center, oklch(0.82 0.15 92 / 0.14), transparent 65%)",
             }}
           />
           {reduce ? (
