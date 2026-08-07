@@ -1,8 +1,8 @@
 ---
 title: "meditations on reading"
 date: "2026-08-06"
-excerpt: "Starting a new chapter."
-image: "/blog/meditations-on-reading/books.jpg"
+excerpt: "Starting a new chapter (literally)."
+image: "/public/blog/welcome-to-my-blog/books.jpg"
 ---
 
 Recently, I've had the chance to get back into reading. It's something I've held as being very important to me since childhood, but with school and activities, it's difficult to find the dedicated time to actually be able to pick up a book and sit with it for a good while. 
@@ -31,9 +31,9 @@ I'll admit, this isn't a measly roster. These books have definitely made me thin
 
 > "Man will only become better when you make him see what he is like" - Anton Chekhov 
 
-I couldn't have said it better. The best way to understand ourselves must be by accepting that we have inherent flaws and that, instead of working against them and pushing through life as if they aren't there, taking the time to study ourselves and exploit our weaknesses (and the weaknesses of others) to our advantage. Easier said than done though, am I right? 
+I couldn't have said it better. The best way to understand ourselves must be by accepting that we have inherent flaws and that, instead of working against them and pushing through life as if they aren't there, taking the time to study ourselves and exploit our weaknesses (and the weaknesses of others) to our advantage is a good thing. Easier said than done though, am I right? 
 
-I find that  my education and career fields are both so laser-focus on sanitizing myself of my humanity and focusing on producing results and innovating. There isn't room for writing or poetry or art. I sometimes see students in liberal arts programs, and I think of the movie *Dead Poets Society*. I envy them to some degree, yes. Because at the end of the day, ultimately, we need humans and we need art. Art makes us feel things, we all know that. But what I think we don't realize is that being in tech isn't meant to be a dry field. It doesn't mean that we need to completely give up creativity and spend all day typing away lines of code like zombies. There's still room for art and emotion and feeling. It's hard to see it, and I admit I haven't found it yet. But I want to keep looking. I don't want to just read stories.
+I find that my education and career fields are both so laser-focused on sanitizing myself of my humanity and focusing on producing results and innovating. There isn't room for writing or poetry or art. I sometimes see students in liberal arts programs, and I think of the movie *Dead Poets Society*. I envy them to some degree, yes. Because at the end of the day, ultimately, we need humans and we need art. Art makes us feel things, we all know that. But what I think we don't realize is that being in tech isn't meant to be a dry field. It doesn't mean that we need to completely give up creativity and spend all day typing away lines of code like zombies. There's still room for art and emotion and feeling. It's hard to see it, and I admit I haven't found it yet. But I want to keep looking. I don't want to just read stories.
 
 I guess what I'm trying to say is that I want to feel the stories I'm reading. Maybe I don't want to be on Mount Everest, but I *do* want to find beauty in the [natural occurence of the Fibonacci sequence](https://museum.cornell.edu/nature-and-math-the-fibonacci-sequence/). I want to be able to build a creative project where, after you solder it down onto your board, somebody goes "Woah! This will change lives!" Not in the sense of 'this will change OUR lives by letting us sell this for a huge profit', but something along the lines of an innovation really helping enrich someone's quality of life. I don't want to be an engineer or a computer scientist who has no interest in studying humans. After all, do you ever think about the fact that these tech jobs wouldn't have existed (or been easy to explain) 100 years ago? This is all man-made. I know that usually has a negative connotation, but maybe I can find away to convince at least myself that it doesn't need to be so dry.
 
