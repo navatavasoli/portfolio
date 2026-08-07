@@ -15,11 +15,11 @@ In total, since June, here is a comprehensive list of all the books that I've ha
 | --- | --- | 
 | *Into Thin Air* | Jon Krakauer | 
 | *Stoner* | John Williams | 
-| *The 48 Laws of Power* | Robert Greene |
-| *The Myth of Sisyphus* | Albert Camus |
-| *The Complete Stories* | Franz Kafka |
-| *Outliers* | Malcolm Gladwell |
-| *The Let Them Theory* | Mel Robbins |
+| *The 48 Laws of Power*    | Robert Greene |
+| *The Myth of Sisyphus*     | Albert Camus |
+| *The Complete Stories*      | Franz Kafka |
+| *Outliers*    | Malcolm Gladwell |
+| *The Let Them Theory*      | Mel Robbins |
 
 Let me tell you, it has been an absolute treat. Reading books that aren't thick, intellectually dense stacks of paper filled with incomprehensible Greek characters and circuits? Count me in.
 
